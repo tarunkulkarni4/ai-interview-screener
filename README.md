@@ -38,13 +38,23 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-### Step 4 — Optional `.env`
+### Step 4 — Create `.env` (for OpenAI key)
+
+If you want LLM-based scoring, create a `.env` file:
 
 ```powershell
 notepad .env
 ```
 
-(Do not commit this file.)
+Add your OpenAI API key (one line):
+
+```
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
+```
+
+* This enables real AI scoring.
+* If you leave `.env` empty or don’t create it, fallback scoring will be used.
+* Do **not** commit `.env` to GitHub.
 
 ---
 
